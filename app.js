@@ -13,10 +13,16 @@
 
 var express = require('express');
 var app = express();
-var path = require('path');
+
+app.use(express.static('static'));
+
+app.use('/data', require('./data/location'));
+app.get('/locationtest', function (req, res) {
+  res.redirect('/data');
+});
 
 app.get('/', function (req, res) {
-  res.status(200).sendFile(path.join(__dirname + '/static/home.html'));
+  res.redirect('home.html');
 });
 
 app.listen(8080, function () {
