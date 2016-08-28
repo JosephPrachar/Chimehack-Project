@@ -40,6 +40,18 @@ function create (data, cb) {
 }
 // [END create]
 
+function create_quest (data, cb) {
+  var connection = getConnection();
+  connection.query("INSERT INTO questions VALUES (\"?\",\"?\",\"?\",\"?\",\"?\",\"?\",\"?\",\"?\",\"?\",\"?\",\"?\",\"?\",\"?\",\"?\",\"?\",\"?\",\"?\",\"?\",\"?\",\"?\",\"?\",\"?\"",
+    [data.username, data.c1text, data.c2text, data.c31, data.c32, data.c33, data.c3text, data.c41,
+    data.c42, data.c43, data.c44, data.c4text, data.c51, data.c52, data.c53, data.c54, data.c5text,
+    data.c61, data.c62, data.c63, data.c64, data.c6text], function (err, res) {
+      if (err) {
+        return cb(err);
+      }
+    });
+}
+
 function read (id, cb) {
   var connection = getConnection();
   connection.query(
@@ -83,7 +95,8 @@ module.exports = {
   create: create,
   read: read,
   update: update,
-  delete: _delete
+  delete: _delete,
+  create_quest: create_quest
 };
 
 if (module === require.main) {

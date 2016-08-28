@@ -12,11 +12,11 @@ Released   : 20140228
 -->
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<script language ="javascript">
+<!--script language ="javascript">
     window.onbeforeunload = function(){
   return 'Are you sure you want to leave?';
 };
-</script>
+</script-->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title></title>
 <meta name="keywords" content="" />
@@ -49,91 +49,59 @@ Released   : 20140228
 			<h2><a href="#">Record Your Story</a></h2>
 		</div>
 	</div>
-    <div align="center">
-        1. What is your name?  (This can be used to verify your information if you choose to report)
-        <br />
-        <form action="demo_form.asp" method="get">
-        <textarea name="myTextBox" cols="98" rows="1">
-</textarea>
-        <br />
-<br />
-        </form>
-    </div>
-        
-    <div align="center">
-        2. What is your email?  (This can be used to verify your information if you choose to report)
-        <br />
-        <textarea name="myTextBox" cols="98" rows="1">
-</textarea>
-        <br />
-        <br>
-    </div>
-    <div style="position:relative;right: -450px;">
-        3. Are you unsure if this event is classified as sexual assault?
-        <form action="">
-        <input type="radio" name="answer" value="answer">Yes (please read our page on sexual assault)
-<br>
-  <input type="radio" name="answer" value="answer">No<br>
-  <input type="radio" name="answer" value="answer">Other
-</form>
-          <form action="http://www.html.am/html-codes/textboxes/submitted.cfm">
-<textarea name="myTextBox" cols="98" rows="5">
-              </textarea></form>
-   <br />
-
-
-    </div>
-     
-    <div style="position:relative;right: -450px;">
-        4. Did you give your full consent?
-        <form action="">
-        <input type="radio" name="answer" value="answer">Yes<br>
-        <input type="radio" name="answer" value="answer">No<br>
-        <input type="radio" name="answer" value="answer">Maybe<br>
-        <input type="radio" name="answer" value="answer">Other
-        </form>
-        <form action="http://www.html.am/html-codes/textboxes/submitted.cfm">
-        <textarea name="myTextBox" cols="98" rows="5">
-        </textarea></form>
-        <br />
-
-    </div>
-    
-    <div style="position:relative;right: -450px;">
-        5. If maybe, how did you give consent?
-        <br />
-        <form action="">
-        <input type="radio" name="answer" value="answer">I didn’t want to, but was persuaded<br>
-        <input type="radio" name="answer" value="answer">I never actually said no<br>
-        <input type="radio" name="answer" value="answer">I wasn’t comfortable with the extent to which events occurred<br>
-            <input type="radio" name="answer" value="answer">Other </form>
-            <form action="http://www.html.am/html-codes/textboxes/submitted.cfm">
-            <textarea name="myTextBox" cols="98" rows="5">
-            </textarea>
-            <br />  
-            <br />
-        </form>
-        <div style="position:relative;right: -2px;">
-        6. Did you have a previous romantic or sexually-involved relationship with the offender?
-        <br />
-        <form action="">
-        <input type="radio" name="answer" value="answer">Yes<br>
-        <input type="radio" name="answer" value="answer">No <br>
-        <input type="radio" name="answer" value="answer">I don't remember<br>
-        <input type="radio" name="answer" value="answer">I don't want to answer<br>
-            <input type="radio" name="answer" value="answer">Other<br></form>
-            <form action="http://www.html.am/html-codes/textboxes/submitted.cfm">
-            <textarea name="myTextBox" cols="98" rows="5">
-            </textarea>
-            <br />
-            <br />
-        </form>     
+    <form action="/data/addquest" method="post">
+        <div align="center">1. What is your name?  (This can be used to verify your information if you choose to report)
+            <br/>
+            <textarea name="c1text" cols="98" rows="1"></textarea>
+            <br/>
+            <br/>
         </div>
+        <div align="center">2. What is your email?  (This can be used to verify your information if you choose to report)
+            <br/>
+            <textarea name="c2text" cols="98" rows="1"></textarea>
+            <br/>
+            <br>
+        </div>
+        <div style="position:relative;right: -450px;">3. Are you unsure if this event is classified as sexual assault?
+            <input type="radio" name="c31" value="checked">Yes (please read our page on sexual assault)<br>
+            <input type="radio" name="c32" value="checked">No<br>
+            <input type="radio" name="c33" value="checked">Other
+            <textarea name="c3Text" cols="98" rows="5"></textarea>
+            <br/>
+        </div>
+        <div style="position:relative;right: -450px;">4. Did you give your full consent?
+            <input type="radio" name="c41" value="checked">Yes<br>
+            <input type="radio" name="c42" value="checked">No<br>
+            <input type="radio" name="c43" value="checked">Maybe<br>
+            <input type="radio" name="c44" value="checked">Other
+            <textarea name="c4Text" cols="98" rows="5"></textarea>
+            <br/>
+        </div>    
+        <div style="position:relative;right: -450px;">5. If maybe, how did you give consent?
+            <br/>
+            <input type="radio" name="c51" value="checked">I didn’t want to, but was persuaded<br>
+            <input type="radio" name="c52" value="checked">I never actually said no<br>
+            <input type="radio" name="c53" value="checked">I wasn’t comfortable with the extent to which events occurred<br>
+            <input type="radio" name="c54" value="checked">Other
+            <textarea name="c5Text" cols="98" rows="5"></textarea>
+            <br/>  
+            <br/>
+        <div style="position:relative;right: -2px;">6. Did you have a previous romantic or sexually-involved relationship with the offender?
+            <br />
+            <input type="radio" name="c61" value="checked">Yes<br>
+            <input type="radio" name="c62" value="checked">No <br>
+            <input type="radio" name="c63" value="checked">I don't remember<br>
+            <input type="radio" name="c64" value="checked">I don't want to answer<br>
+            <textarea name="c6Text" cols="98" rows="5"></textarea>
+            <br/>
+            <br/>
+            </form>     
+        </div>
+        <input type="submit" value="Submit">
+    </form>
         
-        <div> 
-        7. What is/was your relationship with the offender? 
-        <br />
-         <form action="">
+    <div>7. What is/was your relationship with the offender? 
+        <br/>
         <input type="radio" name="answer" value="answer">husband/wife<br>
         <input type="radio" name="answer" value="answer">Immediate family member<br>
         <input type="radio" name="answer" value="answer">Distant family member<br>
@@ -141,34 +109,30 @@ Released   : 20140228
         <input type="radio" name="answer" value="answer">acquaintance<br>
         <input type="radio" name="answer" value="answer">past relationshio(ex-)<br>
         <input type="radio" name="answer" value="answer">Current relationship(boyfriend/girlfriend)<br>    
-            <input type="radio" name="answer" value="answer">Other<br></form>
-            <form action="http://www.html.am/html-codes/textboxes/submitted.cfm">
-            <textarea name="myTextBox" cols="98" rows="5">
-            </textarea>
-            <br /> 
-            <br />
+        <input type="radio" name="answer" value="answer">Other<br></form>
+        <form action="http://www.html.am/html-codes/textboxes/submitted.cfm">
+        <textarea name="myTextBox" cols="98" rows="5">
+        </textarea>
+        <br/> 
+        <br/>
         </form> 
-        </div>
+    </div>
         
-       <div> 8. Can you identify the suspect?
-           <br />
-        <form action="">
+   <div> 8. Can you identify the suspect?
+       <br/>
         <input type="radio" name="answer" value="answer">Yes<br>
         <input type="radio" name="answer" value="answer">No<br>
         <input type="radio" name="answer" value="answer">I don't remember<br>
         <input type="radio" name="answer" value="answer">I don't want to answer<br>
         <input type="radio" name="answer" value="answer">Other<br></form>
         <form action="http://www.html.am/html-codes/textboxes/submitted.cfm">
-        <textarea name="myTextBox" cols="98" rows="5">
-        </textarea>
-        <br /> 
-        <br />
-        </form> 
-        </div>
+        <textarea name="myTextBox" cols="98" rows="5"></textarea>
+        <br/> 
+        <br/>
+    </div>
        
     <div> 9. What does the suspect look like?
         <br />
-        <form action="">
         Gender: <input type="radio" name="answer" value="answer"> Male 
                 <input type="radio" name="answer" value="answer"> Female
                 <input type="radio" name="answer" value="answer"> I don't know
@@ -178,9 +142,8 @@ Released   : 20140228
                     <input type="radio" name="answer" value="answer"> Blue 
                     <input type="radio" name="answer" value="answer"> Hazel
                     <input type="radio" name="answer" value="answer"> I don't know
-                    <input type="radio" name="answer" value="answer"> Other<form action="http://www.html.am/html-codes/textboxes/submitted.cfm">
-        <textarea name="myTextBox" cols="30" rows="1">
-            </textarea></form>
+                    <input type="radio" name="answer" value="answer"> Other
+        <textarea name="myTextBox" cols="30" rows="1"></textarea>
          <br />
         <form action="">
         Eye color: <input type="radio" name="answer" value="answer"> Green

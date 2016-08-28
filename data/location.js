@@ -47,6 +47,18 @@ router.post('/add', function insert (req, res, next) {
 });
 // [END add_post]
 
+router.post('/addquest', function insert2 (req, res, next) {
+  console.log("Add quest (post) route hit");
+  var data = req.body;
+
+  cloudsql.create_quest(data, function(err, savedData) {
+    if (err) {
+      return next(err);
+    }
+  });
+  res.redirect(req.baseUrl);
+})
+
 /**
  * GET /books/:id/edit
  *
@@ -69,7 +81,7 @@ router.get('/:location/edit', function editForm (req, res, next) {
 router.post('/:location/edit', function update (req, res, next) {
   var data = req.body;
 
-  cloudsql.update(req.params.username, data, function (err, savedData) {
+  cloudsql.update(req.params, data, function (err, savedData) {
     if (err) {
       return next(err);
     }
